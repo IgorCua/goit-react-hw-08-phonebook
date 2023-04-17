@@ -1,6 +1,6 @@
 import { logIn } from "components/redux/auth/operations";
-import { selectAuth } from "components/redux/auth/selectors";
-import { useSelector, useDispatch } from "react-redux";
+// import { selectAuth } from "components/redux/auth/selectors";
+import { useDispatch } from "react-redux";
 
 export const LoginForm = () => {
     // const auth = useSelector(selectAuth);

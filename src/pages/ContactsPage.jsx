@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 import { ContactsList } from "components/ContactsList/ContactsList";
 import { PhonebookForm } from "components/PhonebookForm/PhonebookForm";
-import { Navigation } from "components/navigation/Navigation";
-import { UserMenu } from "components/userMenu/UserMenu";
+// import { Navigation } from "components/navigation/Navigation";
+// import { UserMenu } from "components/userMenu/UserMenu";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { selectIsLoggeIn } from "components/redux/auth/selectors";

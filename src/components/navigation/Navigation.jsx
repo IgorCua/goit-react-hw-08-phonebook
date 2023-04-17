@@ -1,15 +1,15 @@
-import { NavLink, Link } from "react-router-dom";
+// import { NavLink, Link } from "react-router-dom";
 // import { logIn } from "components/redux/auth/operations";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { selectAuth, selectIsLoggeIn } from "components/redux/auth/selectors";
-import { logOut } from "components/redux/auth/operations";
+// import { logOut } from "components/redux/auth/operations";
 import { Nav, StyledLink } from "./Navigation.styled";
 // import style from "./Navigation.module.css";
 
 export const Navigation = () => {
     const isloggedIn = useSelector(selectIsLoggeIn);
     const auth = useSelector(selectAuth);
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
     console.log('navigation isLoggedIn', isloggedIn)
     console.log('navigation state', auth)
     return (<Nav>

@@ -1,7 +1,7 @@
-import { Navigation } from "components/navigation/Navigation"
-import { selectAuth } from "components/redux/auth/selectors";
+// import { Navigation } from "components/navigation/Navigation"
+// import { selectAuth } from "components/redux/auth/selectors";
 import { register } from "components/redux/auth/operations";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 
 export const RegisterPage = () => {
     // const auth = useSelector(selectAuth);

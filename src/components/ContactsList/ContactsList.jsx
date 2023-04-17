@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import style from "./ContactsList.module.css";
 import { useSelector, useDispatch } from "react-redux";
 import { 
@@ -28,13 +29,20 @@ export const ContactsList = (props) => {
             <input className={style.filterInput} type="text" id="filter" onChange={filterContacts}/>
             
             <ul className={style.list}>
-                {filteredContacts?.map(({id, name, phone}) => {
+                {filteredContacts?.map(({id, name, number}) => {
                     return <li className={style.item} key={id} id={id}>
-                        <p className={style.text}>{name}: {phone}</p> 
+                        <p className={style.text}>{name}: {number}</p> 
                         <button className={style.button} type="button" onClick={deleteFromContacts}>Delete</button>       
                     </li>
                 })}
             </ul>
         </div>
     )
+}
+
+ContactsList.propTypes = {
+    contacts: PropTypes.array,
+    filter: PropTypes.string,
+    name: PropTypes.string,
+    number: PropTypes.string
 }

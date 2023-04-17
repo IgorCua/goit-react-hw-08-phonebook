@@ -6,13 +6,14 @@ import { addContact } from "components/redux/operations";
 export const PhonebookForm = (props) => {
     // const {handleSubmit} = props;
     const contacts = useSelector(selectContacts);
+    // const 
     const dispatch = useDispatch();
 
     const handleSubmit = (evt) => {
         evt.preventDefault();
 
         const name = evt.target.name.value;
-        const phone = evt.target.number.value;
+        const number = evt.target.number.value;
         const regex = new RegExp(`\\b${name}\\b`, 'i');
         
         for (let element of contacts) {
@@ -22,8 +23,9 @@ export const PhonebookForm = (props) => {
             }
         }
         
-        dispatch(addContact({name, phone}));
+        dispatch(addContact({name, number}));
         evt.target.reset();
+        console.log()
     }
     return <form action="" onSubmit={handleSubmit} className={style.form}>
         <label htmlFor="name" className={style.nameLabel}>Name</label>
